@@ -1,6 +1,12 @@
 # GoKart CAN Library
 
 This library provides a simple interface for using a CAN bus with an Arduino board to communicate with a GoKart. It consists of two files: `GoKartCan.h` and `GoKartCan.cpp`.
+## Features
+
+- Initialize the MCP2515 CAN controller
+- Send CAN messages
+- Receive CAN messages
+- Support for standard and extended CAN IDs
 
 ## GoKartCan.h
 
