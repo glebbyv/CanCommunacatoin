@@ -9,7 +9,7 @@ This library provides a simple interface for using a CAN bus with an Arduino boa
 - Support for standard and extended CAN IDs
 
 ## External Libraries Used
-- `mcp_can`: Library for interfacing with the MCP2515 CAN controller.
+- `mcp_can` (by coryjfowler): Library for interfacing with the MCP2515 CAN controller.
 - `SPI`: Arduino SPI library for SPI communication.  
 
 ## GoKartCan.h
