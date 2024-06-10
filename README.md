@@ -29,23 +29,23 @@ In this library, CAN communication is managed by a handler, which allows for har
 #include "GoKartCan.h"
 #include <Arduino.h>
 
-GoKartCan goKartCan(2, 10); // Interrupt pin: 2, Chip select pin: 10
+GoKartCan CanHandler(2, 10); // Interrupt pin: 2, Chip select pin: 10
 
 void setup() {
   Serial.begin(115200);
 }
 
 void loop() {
-  goKartCan.receive(); // Check for and print any received CAN messages
+  CanHandler.receive(); // Check for and print any received CAN messages
   // Example of sending a message
-  goKartCan.Data[0] = 0x01;
-  goKartCan.Data[1] = 0x02;
-  goKartCan.Data[2] = 0x03;
-  goKartCan.Data[3] = 0x04;
-  goKartCan.Data[4] = 0x05;
-  goKartCan.Data[5] = 0x06;
-  goKartCan.Data[6] = 0x07;
-  goKartCan.Data[7] = 0x08;
-  goKartCan.send(0x100, 0, 8); // Send a message with ID 0x100
+  CanHandler.Data[0] = 0x01;
+  CanHandler.Data[1] = 0x02;
+  CanHandler.Data[2] = 0x03;
+  CanHandler.Data[3] = 0x04;
+  CanHandler.Data[4] = 0x05;
+  CanHandler.Data[5] = 0x06;
+  CanHandler.Data[6] = 0x07;
+  CanHandler.Data[7] = 0x08;
+  CanHandler.send(0x100, 0, 8); // Send a message with ID 0x100
   delay(1000);
 }
